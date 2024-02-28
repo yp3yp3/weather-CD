@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello
+  name: weather
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello
+      app: weather
   
   template:
     metadata:
       labels:
-        app: hello
+        app: weather
     spec:
       containers:
       - name: hello
-        image: yp3yp3/hello:new
+        image: yp3yp3/gunicornapp:latest
         ports:
         - containerPort: 3000
 
@@ -24,12 +24,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello
+  name: weather
 spec:
   type: LoadBalancer
   ports:
   - port: 80
     targetPort: 3000
   selector:
-    app: hello
+    app: weather
 
