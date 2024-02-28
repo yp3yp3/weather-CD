@@ -28,7 +28,7 @@ metadata:
   name: weather
   namespace: default
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 8081
