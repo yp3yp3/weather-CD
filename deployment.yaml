@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: hello
-        image: yp3yp3/gunicornapp:latest
+        image: yp3yp3/weather:17
         ports:
         - containerPort: 8081
 
