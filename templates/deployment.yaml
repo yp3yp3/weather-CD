@@ -20,4 +20,4 @@ spec:
             - name: ENV
               value: "{{ .Values.env.ENV }}"
           ports:
-            - containerPort: 80
+            - containerPort: {{ .Values.service.targetPort }}
