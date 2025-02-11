@@ -1,8 +1,0 @@
-replicaCount: 2
-env:
-  ENV: "production"
-image:
-  tag: "prod"
-ingress:
-  hosts:
-    - host: prod.k8s.yp3yp3.online
