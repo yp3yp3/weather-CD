@@ -1,0 +1,21 @@
+replicaCount: 2
+
+image:
+  repository: yp3yp3/weather
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  hosts:
+    - host: prod.k8s.yp3yp3.online
+      paths:
+        - path: /
+          pathType: Prefix
+
+env:
+  ENV: "prod"
