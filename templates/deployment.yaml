@@ -19,5 +19,7 @@ spec:
           env:
             - name: ENV
               value: "{{ .Values.env.ENV }}"
+            - name: BUILD_NUM
+              value: {{ .Values.image.tag }}
           ports:
             - containerPort: {{ .Values.service.targetPort }}
