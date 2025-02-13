@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: yp3yp3/weather
-  tag: 54
+  tag: 55
   pullPolicy: IfNotPresent
 
 service:
