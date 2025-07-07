@@ -13,7 +13,7 @@ service:
 ingress:
   enabled: true
   hosts:
-    - host: prod.k8s.yp3yp3.online
+    - host: prod.k8s.yp3yp3.site
       paths:
         - path: /
           pathType: Prefix
